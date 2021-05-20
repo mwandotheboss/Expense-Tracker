@@ -1,14 +1,14 @@
-import 'package:budget_tracker_ui/json/create_budget_json.dart';
-import 'package:budget_tracker_ui/theme/colors.dart';
+import 'package:expense_tracker/json/create_budget_json.dart';
+import 'package:expense_tracker/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
 class CreatBudgetPage extends StatefulWidget {
   @override
-  _CreatBudgetPageState createState() => _CreatBudgetPageState();
+  _CreateBudgetPageState createState() => _CreateBudgetPageState();
 }
 
-class _CreatBudgetPageState extends State<CreatBudgetPage> {
+class _CreateBudgetPageState extends State<CreatBudgetPage> {
   int activeCategory = 0;
   TextEditingController _budgetName =
   TextEditingController(text: "Grocery Budget");

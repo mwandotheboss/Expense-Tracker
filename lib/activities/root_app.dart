@@ -1,5 +1,14 @@
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:expense_tracker/activities/profile_page.dart';
+import 'package:expense_tracker/activities/stats_page.dart';
+import 'package:expense_tracker/theme/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+
+import 'budget_page.dart';
+import 'create_budget_page.dart';
+import 'daily_page.dart';
 
 class RootApp extends StatefulWidget {
   @override
