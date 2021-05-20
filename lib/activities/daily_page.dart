@@ -11,6 +11,7 @@ class DailyPage extends StatefulWidget {
 
 class _DailyPageState extends State<DailyPage> {
   int activeDay = 3;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,86 +115,86 @@ class _DailyPageState extends State<DailyPage> {
             padding: const EdgeInsets.only(left: 20, right: 20),
             child: Column(
                 children: List.generate(daily.length, (index) {
-                  return Column(
+              return Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            width: (size.width - 40) * 0.7,
-                            child: Row(
-                              children: [
-                                Container(
-                                  width: 50,
-                                  height: 50,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: grey.withOpacity(0.1),
-                                  ),
-                                  child: Center(
-                                    child: Image.asset(
-                                      daily[index]['icon'],
-                                      width: 30,
-                                      height: 30,
-                                    ),
-                                  ),
+                      Container(
+                        width: (size.width - 40) * 0.7,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: grey.withOpacity(0.1),
+                              ),
+                              child: Center(
+                                child: Image.asset(
+                                  daily[index]['icon'],
+                                  width: 30,
+                                  height: 30,
                                 ),
-                                SizedBox(width: 15),
-                                Container(
-                                  width: (size.width - 90) * 0.5,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        daily[index]['name'],
-                                        style: TextStyle(
-                                            fontSize: 15,
-                                            color: black,
-                                            fontWeight: FontWeight.w500),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                      SizedBox(height: 5),
-                                      Text(
-                                        daily[index]['date'],
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            color: black.withOpacity(0.5),
-                                            fontWeight: FontWeight.w400),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ],
+                              ),
+                            ),
+                            SizedBox(width: 15),
+                            Container(
+                              width: (size.width - 90) * 0.5,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    daily[index]['name'],
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        color: black,
+                                        fontWeight: FontWeight.w500),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                )
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: (size.width - 40) * 0.3,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Text(
-                                  daily[index]['price'],
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 15,
-                                      color: Colors.green),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
+                                  SizedBox(height: 5),
+                                  Text(
+                                    daily[index]['date'],
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: black.withOpacity(0.5),
+                                        fontWeight: FontWeight.w400),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 65, top: 8),
-                        child: Divider(
-                          thickness: 0.8,
+                      Container(
+                        width: (size.width - 40) * 0.3,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              daily[index]['price'],
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 15,
+                                  color: Colors.green),
+                            ),
+                          ],
                         ),
                       )
                     ],
-                  );
-                })),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 65, top: 8),
+                    child: Divider(
+                      thickness: 0.8,
+                    ),
+                  )
+                ],
+              );
+            })),
           ),
           SizedBox(
             height: 15,

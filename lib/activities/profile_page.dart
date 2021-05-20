@@ -10,8 +10,8 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   TextEditingController _email =
-  TextEditingController(text: "abbie_wilson@gmail.com");
-  TextEditingController dateOfBirth = TextEditingController(text: "04-19-1992");
+  TextEditingController(text: "info@smartwareafrica.com");
+  TextEditingController dateOfBirth = TextEditingController(text: "27-02-1997");
   TextEditingController password = TextEditingController(text: "123456");
   @override
   Widget build(BuildContext context) {
